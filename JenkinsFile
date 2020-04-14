@@ -13,10 +13,7 @@ pipeline {
         }
        stage('run') {
             steps {
-                sh docker run -d -p 5002:5000 --name python my-image:${env.BUILD_ID}
-
-                
-                }
+                sh docker run -d -p 5002:5000 --name python my-image:${env.BUID_ID}
             }
         }    
     }
