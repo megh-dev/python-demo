@@ -3,17 +3,12 @@ pipeline {
     stages {
         stage('Build image') {
             steps {
-                echo 'Starting to build docker image'
-
-                script {
-                    sh "docker.build("my-image")
-                   
-                }
+               sh "docker build -t my-image ."
             }
         }
        stage('run') {
             steps {
-                sh "docker run -d -p 5002:5000 --name meg my-image"
+                sh "docker run -d -p 5002:5000 --name meg1 my-image"
             }
         }    
     }
