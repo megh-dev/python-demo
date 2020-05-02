@@ -8,7 +8,7 @@ pipeline {
         }
        stage('run') {
             steps {
-                sh "docker run -d -p 5003:5000 --name megdem3 my-image"
+                sh "docker run -d -p 5003:5000 --name megs my-image"
             }
         }    
     }
